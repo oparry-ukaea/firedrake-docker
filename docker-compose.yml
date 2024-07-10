@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  petsc_env:
+    image: petsc-env
+    build:
+      args:
+        BUILD_ARCH: "x86-64"
+        MPICH_DOWNLOAD_VERSION: "3.4.3"
+        MPICH_DOWNLOAD_DEVICE: "ch3:nemesis"
+        EXTRA_PACKAGES: "superlu_dist"
+      context: petsc
+  firedrake:
+    image: firedrake
+    build:
+      args:
+        FIREDRAKE_BRANCH: "master"
+      context: firedrake
+    depends_on: ["petsc_env"]
