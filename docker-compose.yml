@@ -12,8 +12,9 @@ services:
       context: petsc
   firedrake:
     image: firedrake
+    container_name: firedrake
     build:
       args:
-        FIREDRAKE_BRANCH: "master"
+        FIREDRAKE_BRANCH: "JHopeCollins/archer2"
       context: firedrake
     depends_on: ["petsc_env"]
