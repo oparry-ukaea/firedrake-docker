@@ -23,6 +23,7 @@ RUN bash -c 'python3 firedrake-install \
     --no-package-manager \
     --disable-ssh \
     --honour-petsc-dir \
+    --install irksome \
     --mpicc=$MPICH_DIR/mpicc \
     --mpicxx=$MPICH_DIR/mpicxx \
     --mpif90=$MPICH_DIR/mpif90 \ 
