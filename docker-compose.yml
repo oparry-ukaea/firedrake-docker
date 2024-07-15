@@ -13,6 +13,6 @@ services:
     container_name: firedrake
     build:
       args:
-        FIREDRAKE_BRANCH: "JHopeCollins/archer2"
+        FIREDRAKE_BRANCH: "master"
       context: firedrake
     depends_on: ["petsc_env"]
